@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zdb"
+version = "6.0.0"
+description = "Premium TUI for ADB & Fastboot operations"
+requires-python = ">=3.10"
+dependencies = [
+    "textual>=0.47.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+zdb = "zdb.app:main"
+
+[tool.setuptools.packages.find]
+include = ["zdb*"]

@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# ───────────────────────────────────────────
+#  zdb — Quick launcher
+#  Auto-activates venv and runs the TUI app.
+# ───────────────────────────────────────────
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+VENV_DIR="$SCRIPT_DIR/.venv"
+
+# Activate virtual environment
+if [[ -f "$VENV_DIR/bin/activate" ]]; then
+    source "$VENV_DIR/bin/activate"
+else
+    echo "Error: Virtual environment not found at $VENV_DIR"
+    echo "Create one with: python -m venv .venv && pip install -e ."
+    exit 1
+fi
+
+# Run the app
+exec python -m zdb

@@ -1,0 +1,5 @@
+{
+  "version": "6.1.0",
+  "changelog": "- Fixed minor bugs\n- Added new automated test suite\n- Performance improvements under the hood",
+  "url": "https://github.com/nc4tt/zdb/releases/latest"
+}

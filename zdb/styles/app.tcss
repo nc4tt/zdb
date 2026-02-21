@@ -1,0 +1,745 @@
+/* ══════════════════════════════════════════════════════════════
+   ADB TUI — Premium Dark Theme with Material Blue Accents
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Global ─────────────────────────────────────────────────── */
+
+Screen {
+    background: #0d1117;
+    color: #c9d1d9;
+    overflow-y: auto;
+}
+
+* {
+    scrollbar-color: #4fc3f7;
+    scrollbar-color-hover: #81d4fa;
+    scrollbar-color-active: #29b6f6;
+    scrollbar-background: #161b22;
+    scrollbar-background-hover: #1c2128;
+    scrollbar-size-vertical: 1;
+}
+
+/* ── Splash Screen ──────────────────────────────────────────── */
+
+#splash-screen {
+    align: center middle;
+    background: #0d1117;
+}
+
+#splash-container {
+    width: 80;
+    height: auto;
+    align: center middle;
+    padding: 1 2;
+}
+
+#ascii-logo {
+    text-align: center;
+    color: #4fc3f7;
+    text-style: bold;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+#splash-version {
+    text-align: center;
+    color: #8b949e;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+#splash-subtitle {
+    text-align: center;
+    color: #58a6ff;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+#splash-hint {
+    text-align: center;
+    color: #484f58;
+    width: 100%;
+    dock: bottom;
+    margin-bottom: 1;
+}
+
+#splash-progress {
+    width: 60;
+    margin: 1 0;
+    align: center middle;
+    color: #4fc3f7;
+}
+
+/* ── Dashboard ──────────────────────────────────────────────── */
+
+#dashboard-screen {
+    layout: vertical;
+    background: #0d1117;
+}
+
+#dash-header {
+    height: 5;
+    width: 100%;
+    content-align: center middle;
+    background: #161b22;
+    border-bottom: solid #30363d;
+    padding: 1 2;
+}
+
+#dash-header-title {
+    text-align: center;
+    color: #4fc3f7;
+    text-style: bold;
+    width: 100%;
+}
+
+#dash-status-row {
+    layout: horizontal;
+    width: 100%;
+    height: auto;
+    align: center middle;
+}
+
+#dash-header-status {
+    text-align: center;
+    color: #8b949e;
+    width: 1fr;
+}
+
+.btn-refresh {
+    background: #30363d;
+    color: #4fc3f7;
+    text-style: bold;
+    min-width: 14;
+    margin: 0 1;
+    dock: right;
+}
+
+.btn-refresh:hover {
+    background: #484f58;
+    color: #81d4fa;
+}
+
+.btn-refresh:focus {
+    background: #484f58;
+    color: #81d4fa;
+}
+
+#dash-cards {
+    layout: horizontal;
+    align: center middle;
+    height: 1fr;
+    padding: 2 4;
+}
+
+.dash-card {
+    width: 1fr;
+    height: 20;
+    margin: 1 2;
+    padding: 1 2;
+    border: solid #30363d;
+    background: #161b22;
+    content-align: center middle;
+    text-align: center;
+}
+
+.dash-card:hover {
+    border: solid #4fc3f7;
+    background: #1c2433;
+}
+
+.dash-card:focus {
+    border: solid #4fc3f7;
+    background: #1c2433;
+}
+
+.card-icon {
+    text-align: center;
+    color: #4fc3f7;
+    text-style: bold;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+.card-title {
+    text-align: center;
+    color: #e6edf3;
+    text-style: bold;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+.card-desc {
+    text-align: center;
+    color: #8b949e;
+    width: 100%;
+}
+
+.card-key {
+    text-align: center;
+    color: #484f58;
+    width: 100%;
+    margin-top: 1;
+}
+
+#dash-footer {
+    height: 3;
+    dock: bottom;
+    background: #161b22;
+    border-top: solid #30363d;
+    content-align: center middle;
+    padding: 0 2;
+}
+
+#dash-footer-text {
+    text-align: center;
+    color: #484f58;
+    width: 100%;
+}
+
+/* ── Operation Screens (ADB / Fastboot) ─────────────────────── */
+
+.op-screen {
+    layout: vertical;
+    background: #0d1117;
+}
+
+.op-header {
+    height: 3;
+    width: 100%;
+    background: #161b22;
+    border-bottom: solid #30363d;
+    content-align: center middle;
+    padding: 0 2;
+}
+
+.op-header-title {
+    text-align: center;
+    color: #4fc3f7;
+    text-style: bold;
+    width: 100%;
+}
+
+.op-body {
+    layout: horizontal;
+    height: 1fr;
+}
+
+.op-sidebar {
+    width: 36;
+    border-right: solid #30363d;
+    background: #161b22;
+    padding: 1 0;
+    overflow-y: auto;
+}
+
+.op-content {
+    width: 1fr;
+    padding: 1 2;
+    overflow-y: auto;
+}
+
+.op-list-item {
+    padding: 1 2;
+    width: 100%;
+    color: #c9d1d9;
+    background: transparent;
+}
+
+.op-list-item:hover {
+    background: #1c2433;
+    color: #e6edf3;
+}
+
+.op-list-item:focus {
+    background: #1c2433;
+    color: #4fc3f7;
+}
+
+.op-list-item.-selected {
+    background: #1c2433;
+    color: #4fc3f7;
+    text-style: bold;
+}
+
+.op-category-label {
+    padding: 1 2;
+    color: #484f58;
+    text-style: bold italic;
+    width: 100%;
+    border-bottom: solid #21262d;
+}
+
+#output-panel {
+    height: 100%;
+    border: solid #30363d;
+    background: #0d1117;
+    padding: 1;
+    overflow-y: auto;
+}
+
+#output-log {
+    width: 100%;
+    min-height: 100%;
+}
+
+.status-running {
+    color: #4fc3f7;
+}
+
+.status-success {
+    color: #66bb6a;
+}
+
+.status-failed {
+    color: #ef5350;
+}
+
+.status-auth {
+    color: #ffa726;
+}
+
+/* ── Input Dialogs ──────────────────────────────────────────── */
+
+.input-dialog {
+    align: center middle;
+    background: #0d1117 80%;
+}
+
+.input-dialog-box {
+    width: 60;
+    height: auto;
+    max-height: 20;
+    background: #161b22;
+    border: solid #4fc3f7;
+    padding: 2 3;
+}
+
+.input-dialog-title {
+    text-align: center;
+    color: #4fc3f7;
+    text-style: bold;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+.input-field {
+    width: 100%;
+    margin: 1 0;
+}
+
+.dialog-buttons {
+    layout: horizontal;
+    width: 100%;
+    align: center middle;
+    margin-top: 1;
+    height: 3;
+}
+
+.dialog-btn {
+    margin: 0 1;
+    min-width: 12;
+}
+
+.btn-primary {
+    background: #4fc3f7;
+    color: #0d1117;
+    text-style: bold;
+}
+
+.btn-primary:hover {
+    background: #81d4fa;
+}
+
+.btn-danger {
+    background: #ef5350;
+    color: #ffffff;
+    text-style: bold;
+}
+
+.btn-danger:hover {
+    background: #f44336;
+}
+
+.btn-secondary {
+    background: #30363d;
+    color: #c9d1d9;
+}
+
+.btn-secondary:hover {
+    background: #484f58;
+}
+
+/* ── Device Info Screen ─────────────────────────────────────── */
+
+#device-info-screen {
+    layout: vertical;
+    background: #0d1117;
+}
+
+#di-header {
+    height: 3;
+    width: 100%;
+    background: #161b22;
+    border-bottom: solid #30363d;
+    content-align: center middle;
+}
+
+#di-header-title {
+    text-align: center;
+    color: #4fc3f7;
+    text-style: bold;
+    width: 100%;
+}
+
+#di-body {
+    layout: horizontal;
+    height: 1fr;
+    overflow-y: auto;
+}
+
+#di-device-panel {
+    width: 35;
+    border-right: solid #30363d;
+    background: #161b22;
+    padding: 1 2;
+    content-align: center top;
+    overflow-y: auto;
+}
+
+#di-device-art {
+    text-align: center;
+    color: #4fc3f7;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+#di-device-name {
+    text-align: center;
+    color: #e6edf3;
+    text-style: bold;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#di-device-brand {
+    text-align: center;
+    color: #8b949e;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+#di-info-panel {
+    width: 1fr;
+    padding: 1 2;
+    overflow-y: auto;
+}
+
+.info-section {
+    margin-bottom: 1;
+    padding: 1 2;
+    border: solid #30363d;
+    background: #161b22;
+    width: 100%;
+}
+
+.info-section-title {
+    color: #4fc3f7;
+    text-style: bold;
+    width: 100%;
+    margin-bottom: 1;
+    padding-bottom: 1;
+    border-bottom: solid #21262d;
+}
+
+.info-row {
+    layout: horizontal;
+    width: 100%;
+    height: auto;
+    padding: 0 0;
+}
+
+.info-label {
+    width: 22;
+    color: #8b949e;
+    min-width: 22;
+}
+
+.info-value {
+    width: 1fr;
+    color: #e6edf3;
+}
+
+.usage-bar-track {
+    width: 20;
+    background: #21262d;
+    height: 1;
+}
+
+.usage-bar-fill {
+    background: #4fc3f7;
+    height: 1;
+}
+
+#di-footer {
+    height: 3;
+    dock: bottom;
+    background: #161b22;
+    border-top: solid #30363d;
+    content-align: center middle;
+}
+
+#di-footer-text {
+    text-align: center;
+    color: #484f58;
+    width: 100%;
+}
+
+#di-no-device {
+    width: 100%;
+    height: 100%;
+    content-align: center middle;
+}
+
+#di-no-device-text {
+    text-align: center;
+    color: #484f58;
+    width: 60;
+}
+
+/* ── Confirm Dialog ─────────────────────────────────────────── */
+
+ConfirmDialog {
+    align: center middle;
+    background: #0d1117 80%;
+}
+
+#confirm-box {
+    width: 50;
+    height: auto;
+    background: #161b22;
+    border: solid #ffa726;
+    padding: 2 3;
+}
+
+#confirm-title {
+    text-align: center;
+    color: #ffa726;
+    text-style: bold;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+#confirm-message {
+    text-align: center;
+    color: #c9d1d9;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+/* ── Header Close / Exit Buttons ────────────────────────────── */
+
+.header-close-btn {
+    background: #30363d;
+    color: #ffa726;
+    text-style: bold;
+    margin: 0 1;
+    min-width: 12;
+    dock: right;
+}
+
+.header-close-btn:hover {
+    background: #484f58;
+    color: #ffcc80;
+}
+
+.header-close-btn:focus {
+    background: #484f58;
+    color: #ffcc80;
+}
+
+#btn-exit {
+    background: #ef5350;
+    color: #ffffff;
+    text-style: bold;
+    margin: 0 1;
+    min-width: 14;
+}
+
+#btn-exit:hover {
+    background: #f44336;
+    color: #ffffff;
+}
+
+#btn-exit:focus {
+    background: #f44336;
+    color: #ffffff;
+}
+
+/* ── Global Animations ──────────────────────────────────────── */
+
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in.-visible {
+    opacity: 1;
+}
+
+/* ── Device Selection Dialog ───────────────────────────────────────── */
+
+.device-select-box {
+    width: 70;
+    height: auto;
+    max-height: 24;
+    background: #161b22;
+    border: solid #4fc3f7;
+    padding: 2 3;
+}
+
+.device-select-item {
+    padding: 1 2;
+    width: 100%;
+    color: #c9d1d9;
+    background: transparent;
+    margin: 0 0;
+}
+
+.device-select-item:hover {
+    background: #1c2433;
+    color: #4fc3f7;
+}
+
+.device-select-item:focus {
+    background: #1c2433;
+    color: #4fc3f7;
+    text-style: bold;
+}
+
+.device-empty {
+    text-align: center;
+    color: #8b949e;
+    width: 100%;
+    padding: 2 0;
+}
+
+/* ── Changelog Screen ──────────────────────────────────────────────── */
+
+#changelog-body {
+    padding: 1 3;
+    overflow-y: auto;
+    height: 1fr;
+}
+
+.changelog-version {
+    margin-bottom: 1;
+    padding: 1 2;
+    border: solid #30363d;
+    background: #161b22;
+    width: 100%;
+}
+
+.changelog-version-title {
+    color: #4fc3f7;
+    text-style: bold;
+    width: 100%;
+    margin-bottom: 1;
+    padding-bottom: 1;
+    border-bottom: solid #21262d;
+}
+
+.changelog-items {
+    color: #c9d1d9;
+    width: 100%;
+    padding: 0 1;
+}
+
+/* ── Changelog Button ──────────────────────────────────────────────── */
+
+.btn-changelog {
+    background: #30363d;
+    color: #4fc3f7;
+    text-style: bold;
+    margin: 0 1;
+    min-width: 16;
+}
+
+.btn-changelog:hover {
+    background: #484f58;
+    color: #81d4fa;
+}
+
+.btn-changelog:focus {
+    background: #484f58;
+    color: #81d4fa;
+}
+
+/* ── Password Dialog ───────────────────────────────────────────────── */
+
+.password-info {
+    color: #8b949e;
+    width: 100%;
+    padding: 1 1;
+    margin-bottom: 1;
+}
+
+/* ── Credits Screen ────────────────────────────────────────────────── */
+
+#credits-body {
+    padding: 1 3;
+    overflow-y: auto;
+    height: 1fr;
+}
+
+.credits-heading {
+    text-align: center;
+    color: #4fc3f7;
+    width: 100%;
+    margin-bottom: 1;
+    padding: 1 0;
+}
+
+.credit-card {
+    margin-bottom: 1;
+    padding: 1 2;
+    border: solid #30363d;
+    background: #161b22;
+    width: 100%;
+}
+
+.credit-card:hover {
+    border: solid #4fc3f7;
+    background: #1c2433;
+}
+
+.credit-name {
+    color: #e6edf3;
+    text-style: bold;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.credit-role {
+    color: #8b949e;
+    width: 100%;
+}
+
+/* ── Credits Button ────────────────────────────────────────────────── */
+
+.btn-credits {
+    background: #30363d;
+    color: #4fc3f7;
+    text-style: bold;
+    margin: 0 1;
+    min-width: 14;
+}
+
+.btn-credits:hover {
+    background: #484f58;
+    color: #81d4fa;
+}
+
+.btn-credits:focus {
+    background: #484f58;
+    color: #81d4fa;
+}
