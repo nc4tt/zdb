@@ -24,7 +24,7 @@ class SplashScreen(Screen):
         with Container(id="splash-screen"):
             with Vertical(id="splash-container"):
                 yield Static("", id="ascii-logo")
-                yield Static("v6", id="splash-version")
+                yield Static("v7", id="splash-version")
                 yield Static("Android Debug Bridge & Fastboot", id="splash-subtitle")
                 with Center():
                     yield ProgressBar(
