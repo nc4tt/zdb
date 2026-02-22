@@ -30,7 +30,7 @@ LOADING_FRAMES = [
 ]
 
 BOOT_SEQUENCE = [
-    "█ Bootstrapping zdb v6...",
+    "█ Bootstrapping zdb v7...",
     "█ Loading core modules...",
     "█ Enumerating USB devices...",
     "█ Connecting to ADB daemon...",
